@@ -4,6 +4,8 @@ const layouts = require('express-ejs-layouts');
 const app = express();
 const session = require('express-session');
 const flash = require('connect-flash');
+const passport = require('./config/ppConfig');
+const isLoggedIn = require('./middleware/isLoggedIn');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 console.log(SECRET_SESSION);
@@ -23,6 +25,9 @@ app.use(session({
 
 app.use(flash());
 
+app.use(passport.initialize()); 
+app.use(passport.session());
+
 app.use((req, res, next) => {
   console.log(res.locals);
   res.locals.alerts = req.flash();
@@ -34,6 +39,13 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
+// access to all of our auth routes GET /auth/login, GET /auth/signup, POST routes
+app.use('/auth', require('./controllers/auth'));
+
+app.get('/profile', isLoggedIn, (req, res) => {
+  const { id, name, email } = req.user.get(); 
+  res.render('profile', { id, name, email });
+});
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
