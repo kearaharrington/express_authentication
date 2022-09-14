@@ -4,16 +4,18 @@ Fork & Clone this repo.
 
 ## Part 1
 
-- [ ] Review the [Project 2 requirements](https://romebell.gitbook.io/seirfx-621/projects/project-2)
+- [X] Review the [Project 2 requirements](https://romebell.gitbook.io/seirfx-621/projects/project-2)
 
-- [ ] Check out some [examples](https://romebell.gitbook.io/seirfx-621/projects/past-projects/project2)
+- [X] Check out some [examples](https://romebell.gitbook.io/seirfx-621/projects/past-projects/project2)
 
 - [ ] In this space below, list **THREE** ideas for your Project 2. For each idea, include [user stories](https://www.atlassian.com/agile/project-management/user-stories) for each idea and a link to the API(s) you want to use for it.
 
 --------------------------------------------------------
-1. 
-2. 
-3.
+1. Gift exchange randomizer (like Elfster). 
+2. Delivery location confirmation - compare post code of user entered address to delivery post code from tracking website
+3. TBR lists - create lists of books you want to read, each list item would have a details page where you could add comments, books could be moved onto a Read list or a DNF list, possibly also an in progress list
+https://rapidapi.com/Lagrafabdessalem/api/amazon-kindle-scraper/ - "Amazon kindle scraper is the best and the easiest way to get access to book prices, sales, rank, and reviews data from amazon kindle book in JSON format."
+https://rapidapi.com/roftcomp-laGmBwlWLm/api/hapi-books/ - "HAPI Books is an API about books. It gives information about thousands of books from all around the world. Search by name, by genre, get the best books by year, and more!"
 ---------------------------------------------------------
 
 - [ ] Make a PR when you're done!
